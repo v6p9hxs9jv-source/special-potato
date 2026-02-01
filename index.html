@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Valentine 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      text-align: center;
+      margin-top: 120px;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #ffb6c1, #ffe6f0);
+    }
+    h1 {
+      color: #ff0055;
+    }
+    button {
+      padding: 15px 25px;
+      font-size: 18px;
+      margin: 15px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+    }
+    #yes {
+      background-color: #ff3366;
+      color: white;
+    }
+    #no {
+      position: absolute;
+      background-color: #666;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Will you be my Valentine? 💘</h1>
+
+  <button id="yes" onclick="yesClicked()">YES 💖</button>
+  <button id="no" onmouseover="moveNo()">NO 😜</button>
+
+  <script>
+    function moveNo() {
+      var x = Math.random() * (window.innerWidth - 100);
+      var y = Math.random() * (window.innerHeight - 100);
+      document.getElementById("no").style.left = x + "px";
+      document.getElementById("no").style.top = y + "px";
+    }
+
+    function yesClicked() {
+      window.location.href =
+        "https://wa.me/?text=I%20just%20said%20YES%20to%20be%20your%20Valentine%20%F0%9F%92%96%F0%9F%A5%B0";
+    }
+  </script>
+
+</body>
+</html>
